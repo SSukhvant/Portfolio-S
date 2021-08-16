@@ -1,22 +1,28 @@
-import React from 'react';
+import React from "react";
+import Profile from "./img/Pro.png";
 
 const Home = () => {
-    return (
-        <>
+  return (
+    <>
+      <section className="home-section section">
         <div className="container">
-        <div className="home d-flex justify-content-between p-5">
-         <div className="intro">
-          <h5>Hello</h5>
-          <h2>I'm Sukhvant Singh</h2>
-          <h5>Web Designer & Developer</h5>
-         </div>
-         <div className="profile">
-          <h1>Pic</h1>
-         </div>
-        </div>
-        </div>
-        </>
-    );
-}
+          <div className="home align-item-center">
+            <div className="intro">
+              <p>Hello</p>
+              <h2>I'm Sukhvant Singh</h2>
+              <h1>Web Designer & Developer</h1>
+            </div>
+
+            <div className="profile">
+              <div className="img-box inner-shadow">
+                  <img src={Profile} alt="ssukhvant" className="outer-shadow"/>
+              </div>
+            </div>
+          </div>
+          </div>
+      </section>
+    </>
+  );
+};
 
 export default Home;
