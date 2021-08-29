@@ -1,16 +1,37 @@
 import React from "react";
-import Profile from "./img/Pro.png";
+import { NavLink } from "react-router-dom";
+import Profile from "./img/person.png";
 
 const Home = () => {
   return (
     <>
       <section className="home-section section">
+      <div className="effect-wrap">
+       <div className="effect effect-1">
+       </div>
+       <div className="effect effect-2">
+       <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+
+      <div className="effect effect-3">
+       <div className="outer-shadow"></div>
+      </div>
+
+      <div className="effect effect-4">
+      </div>
+
+      <div className="effect effect-5">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div>
+      </div>
+
         <div className="container">
           <div className="home align-item-center">
             <div className="intro">
-              <p>Hello</p>
-              <h2>I'm Sukhvant Singh</h2>
-              <h1>Web Designer & Developer</h1>
+              <p>Welcome to </p>
+              <h2>WEBDEV Studio</h2>
+              <h1>Web Designing & Developent</h1>
+              <a className="btn1" href="#">GET STARTED</a>
             </div>
 
             <div className="profile">

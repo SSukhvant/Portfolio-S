@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     
@@ -6,9 +7,10 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-transparent" id="nav">
+        <div className="sticky-top">
+            <nav className="navbar bg-w shadow-sm">
                 <div className="container">
-                    <a className="navbar-brand" id="brand" href="#">WEBDEV STUDIO</a>
+                    <a className="navbar-brand" href="#">{`</>WEBDEV STUDIO`}</a>
                     <button className="toggler-btn" type="button" onClick={()=>setShow(!show)} id="toggle-button">
                         {show?"X":<span className="toggler-icon" id="toggle-icon"></span>}
                     </button>
@@ -16,32 +18,33 @@ const Navbar = () => {
             </nav>
 
             {
-            show?<div className="nav-menu" id="popup">
+            show?<div className="nav-menu outer-shadow mt-4">
             <div className="nav-menu-inner">
-            <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <NavLink exact activeClassName="active" className="nav-link" aria-current="page" to="/">Home</NavLink>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                        <li className="nav-item">
+                            <NavLink exact activeClassName="active" className="nav-link" to="/">About</NavLink>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
+                        <li className="nav-item">
+                            <NavLink exact activeClassName="active" className="nav-link" to="/">Services</NavLink>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Portfolio</a>
+                        <li className="nav-item">
+                            <NavLink exact activeClassName="active" className="nav-link" to="/Portfolio">Portfolio</NavLink>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Testimonial</a>
+                        <li className="nav-item">
+                            <NavLink exact activeClassName="active" className="nav-link" to="/">Testimonial</NavLink>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                        <li className="nav-item">
+                            <NavLink exact activeClassName="active" className="nav-link" to="/">Contact</NavLink>
                         </li>
                     </ul>
             </div>
         </div>:null
             }
+            </div>
         </>
     );
 };
